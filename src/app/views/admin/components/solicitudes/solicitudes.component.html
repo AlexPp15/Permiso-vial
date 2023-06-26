@@ -1,0 +1,221 @@
+<p>solicitudes works!</p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>Blog Single - Company Bootstrap Template</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Favicons -->
+    <link href="/assets/img/favicon.png" rel="icon" />
+    <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link href="/assets/vendor/animate.css/animate.min.css" rel="stylesheet" />
+    <link href="/assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="/assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="/assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="/assets/vendor/boxicons/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="/assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="/assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
+    <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link href="/assets/css/style.css" rel="stylesheet" />
+
+    <!-- =======================================================
+  * Template Name: Company - v4.7.0
+  * Template URL: https://bootstrapmade.com/company-free-html-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  </head>
+
+  <body>
+    <section
+      style="background-color: rgb(255, 255, 255); margin-top: 100px"
+      id="services"
+      class="services section-bg"
+    >
+      <section>
+        <div class="container animate__animated animate__fadeInDown">
+          <div
+            class="row justify-content-center"
+            style="
+              border: solid;
+              border-radius: 2vh;
+              border-color: rgb(255, 255, 255);
+              box-shadow: -5px 6px 20px 0px rgba(0, 0, 0, 0.753);
+            "
+          >
+            <div class="col-12 col-md-8 col-lg-8 col-xl-6">
+              <form
+                [formGroup]="nuevoPC"
+                (ngSubmit)="postForm(this.nuevoPC.value)"
+                action=""
+              >
+                <div class="row">
+                  <div class="col text-center">
+                    <img
+                      src="https://i.imgur.com/WKrEdF2.png"
+                      height="100"
+                      width="100"
+                      alt=""
+                      style="margin-top: 1vh"
+                    />
+                    <h1>Generar Solicitud</h1>
+                    <p style="margin-top: 1vh" class="text-h3">
+                      Rellene los datos para completar su Solicitud.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="row align-items-center mt-4 form-floating mb-3">
+                  <input
+                    class="form-control"
+                    id="floatingInput"
+                    placeholder="No. Folio"
+                    formControlName="FOLIO"
+                  />
+                  <label for="floatingInput">Folio</label>
+                </div>
+
+                <div class="row align-items-center mt-4 form-floating mb-3">
+                  <input
+                    class="form-control"
+                    id="floatingInput"
+                    placeholder="name@example.com"
+                    formControlName="NOMBRE"
+                  />
+                  <label for="floatingInput">Nombre</label>
+                </div>
+
+                <div class="row align-items-center mt-4 form-floating mb-3">
+                  <input
+                    class="form-control"
+                    id="floatingInput"
+                    placeholder="name@example.com"
+                    formControlName="APELLIDO_PAT"
+                  />
+                  <label for="floatingInput">Apellido Paterno</label>
+                </div>
+
+                <div class="row align-items-center mt-4 form-floating mb-3">
+                  <input
+                    class="form-control"
+                    id="floatingInput"
+                    placeholder="name@example.com"
+                    formControlName="APELLIDO_MAT"
+                  />
+                  <label for="floatingInput">Apellido Materno</label>
+                </div>
+
+                <div class="row align-items-center mt-4 form-floating mb-3">
+                  <select
+                    class="form-select"
+                    aria-label="Default select example"
+                    formControlName="TIPO"
+                  >
+                    <optgroup label="Selecciona una de las opciones:">
+                      <option value="1">Nacimineto</option>
+                      <option value="2">Matrimonio</option>
+                      <option value="3">Defuncion</option>
+                      <option value="4">Divorcio</option>
+                      <option value="5">Inscripciones</option>
+                      <option value="6">Reconociminto</option>
+                    </optgroup>
+                  </select>
+                  <label for="floatingInput">Tipo de busqueda</label>
+                </div>
+
+                <div
+                  style="
+                    width: 100%;
+                    justify-content: center;
+                    text-align: center;
+                  "
+                >
+                  <button
+                    id="boton1"
+                    style="
+                      width: 18%;
+                      color: aliceblue;
+                      background-color: rgb(188, 8, 8);
+                      border-radius: 0.5vh;
+                      border: solid;
+                      border-color: rgb(188, 8, 8);
+                      margin-left: 5vh;
+                      height: 4vh;
+                    "
+                  >
+                    Guardar
+                  </button>
+                  <button
+                    id="boton2"
+                    (click)="verDetalles()"
+                    style="
+                      width: 18%;
+                      color: aliceblue;
+                      background-color: rgb(6, 46, 132);
+                      border-radius: 0.5vh;
+                      border: solid;
+                      border-color: rgb(6, 46, 132);
+                      margin-left: 5vh;
+                      height: 4vh;
+                      margin-bottom: 5vh;
+                    "
+                  >
+                    Ver lista
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <!-- End Services Section -->
+
+    <a
+      href="#"
+      class="back-to-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Vendor JS Files -->
+    <script src="/assets/vendor/aos/aos.js"></script>
+    <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="/assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="/assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

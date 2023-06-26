@@ -1,0 +1,163 @@
+<head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+
+<!--Card fondo-->
+
+<div class="fondo" style="text-align: center; justify-content: center">
+  <h2>Solicitudes</h2>
+
+  <section>
+    <div class="row">
+      <div>
+        <select class="me-3" name="filtro" id="filtro" #cbCampo>
+          <option selected value="FOLIO">Folio</option>
+          <option selected value="NOMBRE">Nombre</option>
+          <option selected value="APELLIDO_PAT">Apellido</option>
+        </select>
+        <img
+          src="https://img.icons8.com/ios-glyphs/30/000000/search--v1.png"
+          alt=""
+          height="30"
+          width="30"
+        />
+        <input
+        style="
+        width: 20%;
+        border-radius: 0.5vh;
+      "
+          placeholder="Nombre del documento"
+          (keyup)="buscar()"
+          #ctCadena
+        />
+      </div>
+      <div class="col-1"></div>
+
+      <div class="col-12">
+
+        <div class="scroll">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Folio</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido paterno</th>
+                <th scope="col">Apellido materno</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Estatus</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let datos of data">
+                <th scope="row">{{ datos.FOLIO }}</th>
+                <td>{{ datos.NOMBRE }}</td>
+                <td>{{ datos.APELLIDO_PAT }}</td>
+                <td>{{ datos.APELLIDO_MAT }}</td>
+                <td>{{ datos.FECHA }}</td>
+                <td *ngIf="datos.TIPO === 0">Nacimiento</td>
+                <td *ngIf="datos.TIPO === 1">Matrimonio</td>
+                <td *ngIf="datos.TIPO === 2">Defuncion</td>
+                <td *ngIf="datos.TIPO === 3">Divorcio</td>
+                <td *ngIf="datos.TIPO === 4">Inscripciones</td>
+                <td *ngIf="datos.TIPO === 5">Reconociminto</td>
+                <td *ngIf="datos.ESTATUS === 0">
+                  <button id="boton1"
+                  (click)="verDetalles(datos.ID)"
+                    style="
+                      background-color: #4caf50; /* Green */
+                      border: none;
+                      color: white;
+
+                      text-align: center;
+                      text-decoration: none;
+                      display: inline-block;
+                      font-size: 16px;
+                      border-radius: .5vh;
+                      width: 18vh;
+                      height: 5vh;
+                    "
+                  >
+                    Procesando
+                  </button>
+                </td>
+                <td *ngIf="datos.ESTATUS === 1">
+                  <button id="boton1"
+                  (click)="verDetalles(datos.ID)"
+                    style="
+                      background-color: #4c98af; /* Green */
+                      border: none;
+                      color: white;
+
+                      text-align: center;
+                      text-decoration: none;
+                      display: inline-block;
+                      font-size: 16px;
+                      border-radius: .5vh;
+                      width: 18vh;
+                      height: 5vh;
+                    "
+                  >
+                    En Captura
+                  </button>
+                </td>
+                <td *ngIf="datos.ESTATUS === 2">
+                  <button id="boton1"
+                  (click)="verDetalles(datos.ID)"
+                    style="
+                      background-color: #a02939; /* Green */
+                      border: none;
+                      color: white;
+
+                      text-align: center;
+                      text-decoration: none;
+                      display: inline-block;
+                      font-size: 16px;
+                      border-radius: .5vh;
+                      width: 18vh;
+                      height: 5vh;
+                    "
+                  >
+                    Capturado
+                  </button>
+                </td>
+                <td *ngIf="datos.ESTATUS === 3">
+                  <button id="boton1"
+                  (click)="verDetalles(datos.ID)"
+                    style="
+                      background-color: #4929a0; /* Green */
+                      border: none;
+                      color: white;
+
+                      text-align: center;
+                      text-decoration: none;
+                      display: inline-block;
+                      font-size: 16px;
+                      border-radius: .5vh;
+                      width: 18vh;
+                      height: 5vh;
+                    "
+                  >
+                    No Encontrado
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+      </div>
+<div style="justify-content: center;text-align: center; width: 100%;">
+  <button id="boton1" (click)="verVolver()" style="width: 20%; background-color: rgb(64, 63, 63); border-radius: .5vh; border: solid; border-color:rgb(64, 63, 63); color: rgb(255, 255, 255);" > Volver </button>
+</div>
+
+
+      <div class="col-1"></div>
+    </div>
+  </section>
+</div>
+<!--Termina Card-->
