@@ -1,4 +1,4 @@
-import { DatosSolicitudComponent } from './../datos-solicitud/datos-solicitud.component';
+
 
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -14,9 +14,7 @@ import { LogoComponent } from 'src/app/shared/components/sidenav-admin/logo/logo
 
 import { ActualizarComponent } from 'src/app/shared/components/footer-admin/actualizar/actualizar.component';
 
-import { SolicitudesComponent } from '../solicitudes/solicitudes.component';
-import { ListaComponent } from '../solicitudes/lista/lista.component';
-import { EstatusComponent } from '../solicitudes/lista/estatus/estatus.component';
+
 import { AuthEGuard } from 'src/app/core/guard/authE.guard';
 
 const routes: Routes = [
@@ -42,32 +40,8 @@ const routes: Routes = [
     path:'pie-de-pagina/actualizar',
     component: ActualizarComponent
   }
-  ,
 
-  {
-    path: 'solicitudes',
-    component: SolicitudesComponent,
-    canActivate:[AuthEGuard],
-  }
-  ,
-  {
-    path: 'lista-solicitudes',
-    component: ListaComponent,
-    canActivate:[AuthEGuard],
-  }
 
-  ,
-  {
-    path: 'listado/:id',
-    component: EstatusComponent,
-    canActivate:[AuthEGuard],
-  },
-
-  {
-    path: 'datos-solitud/:id',
-    component: DatosSolicitudComponent,
-    canActivate:[AuthEGuard],
-  },
 
 
 ];
