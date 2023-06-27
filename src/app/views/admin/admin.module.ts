@@ -8,24 +8,18 @@ import { MenuCompartidoComponent } from './components/menu-compartido/menu-compa
 import { IndexComponent } from './components/index/index.component';
 
 import { ActualizarComponent } from 'src/app/shared/components/footer-admin/actualizar/actualizar.component';
-import { SolicitudesComponent } from './components/solicitudes/solicitudes.component';
-import { ListaComponent } from './components/solicitudes/lista/lista.component';
-import { EstatusComponent } from './components/solicitudes/lista/estatus/estatus.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LogoComponent } from 'src/app/shared/components/sidenav-admin/logo/logo.component';
 import { CommonModule } from '@angular/common';
-import { DatosSolicitudComponent } from './components/datos-solicitud/datos-solicitud.component'
+
 @NgModule({
   declarations: [
     LoginComponent,
     MenuCompartidoComponent,
     IndexComponent,
     ActualizarComponent,
-    SolicitudesComponent,
-    ListaComponent,
-    EstatusComponent,
     LogoComponent,
-    DatosSolicitudComponent,
+
   ],
 
   imports: [AdminRoutingModule, SharedModule, ReactiveFormsModule,CommonModule],
