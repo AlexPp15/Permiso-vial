@@ -77,11 +77,11 @@ this.crearPDF()
 
 
     var logo = new Image();
-    logo.src = 'assets/img/constancia.png';
+    logo.src = 'assets/img/constancia-proteccion-civil.jpg';
     doc.addImage(logo, 'JPEG', .1, .1, 11.8, 7.5);
-doc.text(this.documento[0].NOMBRE , 6, 4.2, {align:"center"});
+doc.text('Algo' , 6, 4.2, {align:"center"});
     doc.output('dataurlnewwindow', {filename: 'Conferencia Magistral'});
-doc.save(this.documento[0].NOMBRE + '.pdf')
+doc.save('jacob' + '.pdf')
 
 
   }

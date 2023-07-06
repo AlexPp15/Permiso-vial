@@ -76,7 +76,7 @@ this.tipo=this.loginForm.value.usuario
 
 
           this.api.logueado = true;
-          this.router.navigate(['/admin/solicitudes']);
+          this.router.navigate(['/admin/permisos']);
 
         } else {
           this.iniciandoSesion = false;

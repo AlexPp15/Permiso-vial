@@ -52,7 +52,7 @@
 
             <div class="row justify-content-center" style="border: solid; border-radius: 2vh; border-color: rgb(255, 255, 255); box-shadow: -5px 6px 20px 0px rgba(0, 0, 0, 0.753);">
               <div class="col-12 col-md-8 col-lg-8 col-xl-6">
-                <form [formGroup]="nuevoPC" (ngSubmit)="postForm(this.nuevoPC.value)" action="">
+                <form (ngSubmit)="postForm(this.nuevoPC.value)" action="">
                 <div class="row">
                   <div class="col text-center">
                     <img src="https://i.imgur.com/JcnpEie.png" height="100" width="150" alt="" style="margin-top: 1vh;"> <h1 style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Conferencia Magistral <br> "Rodada Segura: Una Estrategia de Prevención Para La Vida"</h1>

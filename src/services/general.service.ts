@@ -248,4 +248,9 @@ export class GeneralService {
   datosPUT(estatus: any, id:any) {
     return this.http.get<RespuestaAPI>(API+`/autlan/solicitudes/rc/${estatus}/${id}`)
   }
+
+  nuevoPermiso(form: any) {
+    let direccion = this.url + 'autlan/permiso/vial/nuevo';
+    return this.http.post<RespuestaAPI>(direccion, form);
+  }
 }

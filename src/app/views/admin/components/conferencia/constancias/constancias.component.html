@@ -47,38 +47,17 @@
 
 
 
-        <div class="row justify-content-center" style="border: solid; border-radius: 2vh; border-color: rgb(255, 255, 255); box-shadow: -5px 6px 20px 0px rgba(0, 0, 0, 0.753);">
-          <div class="col-12 col-md-8 col-lg-8 col-xl-6">
-            <form [formGroup]="nuevoPC" (ngSubmit)="postForm()" action="">
-            <div class="row">
-              <div class="col text-center">
-                <img src="https://i.imgur.com/JcnpEie.png" height="100" width="100" alt="" style="margin-top: 1vh;"> <h1 style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Conferencia Magistral <br> "Rodada Segura: Una Estrategia de Prevención Para La Vida"</h1>
-                <p style="margin-top: 1vh; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" class="text-h3">Ingrese su Nombre completo </p>
-              </div>
-            </div>
-
-            <div class="row align-items-center mt-4">
-              <div class="col ">
-                <input class="form-control" placeholder="....." style="text-align: center;" formControlName="NOMBRE">
-              </div>
-            </div>
-
-
-
             <div class="row justify-content-start mt-4">
               <div class="col">
 
-                <button type="submit"  class="btn  mt-4" style="width: 100%;margin-bottom: 5vh;background-color: #C20406;color: rgb(255, 255, 255);">Enviar</button>
+                <button type="submit"  class="btn  mt-4" (click)="crearPDF()" style="width: 100%;margin-bottom: 5vh;background-color: #C20406;color: rgb(255, 255, 255);">Enviar</button>
               </div>
             </div>
 
 
 
 
-          </form>
           </div>
-        </div>
-      </div>
     </section>
 
 

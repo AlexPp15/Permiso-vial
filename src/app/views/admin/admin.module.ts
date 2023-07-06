@@ -11,6 +11,7 @@ import { ActualizarComponent } from 'src/app/shared/components/footer-admin/actu
 import { ReactiveFormsModule } from '@angular/forms';
 import { LogoComponent } from 'src/app/shared/components/sidenav-admin/logo/logo.component';
 import { CommonModule } from '@angular/common';
+import { PermisosComponent } from './components/permisos/permisos.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { CommonModule } from '@angular/common';
     IndexComponent,
     ActualizarComponent,
     LogoComponent,
+    PermisosComponent,
 
   ],
 

@@ -16,6 +16,9 @@ import { ActualizarComponent } from 'src/app/shared/components/footer-admin/actu
 
 
 import { AuthEGuard } from 'src/app/core/guard/authE.guard';
+import { PermisosComponent } from '../permisos/permisos.component';
+import { ConferenciaComponent } from '../conferencia/conferencia.component';
+import { ConstComponent } from '../conferencia/constancias/constancias.component';
 
 const routes: Routes = [
   /*{
@@ -39,6 +42,14 @@ const routes: Routes = [
   {
     path:'pie-de-pagina/actualizar',
     component: ActualizarComponent
+  },
+  {
+    path:'permisos',
+    component: PermisosComponent
+  },
+  {
+    path:'constancia',
+    component: ConstComponent
   }
 
 
