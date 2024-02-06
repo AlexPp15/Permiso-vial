@@ -21,6 +21,10 @@ export class GeneralService {
     return this.http.get<RespuestaAPI>(API + `/autlan/lista/usuarios`);
   }
 
+  listaCarros() {
+    return this.http.get<RespuestaAPI>(API + `/autlan/lista/autos/completa`);
+  }
+
   filtropc(razon: any) {
     return this.http.get<RespuestaAPI>(API + `/autlan/filtro/${razon}`);
   }
@@ -90,7 +94,7 @@ export class GeneralService {
   }
   buscar(columna: string, valor: any) {
     return this.http.get<RespuestaAPI>(
-      API + `/autlan/rc/buscar/${columna}/${valor}`
+      API + `/autlan/permiso/vial/${columna}/${valor}`
     );
   }
   buscarConfe(columna: string, valor: any) {
@@ -253,4 +257,6 @@ export class GeneralService {
     let direccion = this.url + 'autlan/permiso/vial/nuevo';
     return this.http.post<RespuestaAPI>(direccion, form);
   }
+
+  
 }

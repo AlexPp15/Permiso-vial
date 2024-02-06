@@ -17,7 +17,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo:"admin/indice",
+        redirectTo:"admin/inicio",
         pathMatch:"full"
       },
       {

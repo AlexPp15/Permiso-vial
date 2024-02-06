@@ -12,6 +12,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { LogoComponent } from 'src/app/shared/components/sidenav-admin/logo/logo.component';
 import { CommonModule } from '@angular/common';
 import { PermisosComponent } from './components/permisos/permisos.component';
+import { PermisoComponent } from './components/permiso/permiso.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { InicioComponent } from './components/inicio/inicio.component';
 
 @NgModule({
   declarations: [
@@ -21,9 +24,11 @@ import { PermisosComponent } from './components/permisos/permisos.component';
     ActualizarComponent,
     LogoComponent,
     PermisosComponent,
+    PermisoComponent,
+    InicioComponent,
 
   ],
 
-  imports: [AdminRoutingModule, SharedModule, ReactiveFormsModule,CommonModule],
+  imports: [AdminRoutingModule, SharedModule, ReactiveFormsModule,CommonModule,NgxPaginationModule],
 })
 export class AdminModule {}

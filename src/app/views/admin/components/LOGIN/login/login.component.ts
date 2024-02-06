@@ -37,6 +37,7 @@ user:any
     this.checkLocalStorage();
     if (localStorage.getItem("token")) {
       this.token = true;
+      this.router.navigate(['admin/permisos/']);
     }
   }
 

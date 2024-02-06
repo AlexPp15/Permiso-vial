@@ -19,6 +19,9 @@ import { AuthEGuard } from 'src/app/core/guard/authE.guard';
 import { PermisosComponent } from '../permisos/permisos.component';
 import { ConferenciaComponent } from '../conferencia/conferencia.component';
 import { ConstComponent } from '../conferencia/constancias/constancias.component';
+import { PermisoComponent } from '../permiso/permiso.component';
+import { InicioComponent } from '../inicio/inicio.component';
+
 
 const routes: Routes = [
   /*{
@@ -29,6 +32,11 @@ const routes: Routes = [
 
     path: 'login',
     component: LoginComponent
+  },
+  {
+
+    path: 'inicio',
+    component: InicioComponent
   },
   {
     path: 'indice',
@@ -45,13 +53,19 @@ const routes: Routes = [
   },
   {
     path:'permisos',
-    component: PermisosComponent
+    component: PermisosComponent,
+    canActivate:[AuthEGuard],
   },
   {
     path:'constancia',
     component: ConstComponent
-  }
-
+  },
+  {
+    path: 'lista/permisos',
+    component: PermisoComponent,
+    canActivate:[AuthEGuard],
+  },
+  
 
 
 

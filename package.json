@@ -22,10 +22,12 @@
     "@ckeditor/ckeditor5-angular": "^4.0.0",
     "@ckeditor/ckeditor5-build-classic": "^35.4.0",
     "bootstrap": "^5.2.3",
+    "console-browserify": "^1.2.0",
     "exceljs": "^4.3.0",
     "file-saver": "^2.0.5",
     "firebase": "^9.14.0",
     "jspdf": "^2.5.1",
+    "ngx-pagination": "^6.0.3",
     "rxjs": "~6.6.0",
     "sweetalert2": "^11.6.5",
     "zone.js": "~0.11.4"

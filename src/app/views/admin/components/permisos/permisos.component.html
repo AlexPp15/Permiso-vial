@@ -51,11 +51,7 @@
               box-shadow: -5px 6px 20px 0px rgba(0, 0, 0, 0.753);
             ">
           <div class="col-12 col-md-8 col-lg-8 col-xl-6">
-            <form
-                [formGroup]="nuevoPC"
-                (ngSubmit)="postForm(this.nuevoPC.value)"
-                action=""
-              >
+            <form [formGroup]="nuevoPC" (ngSubmit)="postForm(this.nuevoPC.value)" action="">
               <div class="row">
                 <div class="col text-center">
                   <img src="https://i.imgur.com/WKrEdF2.png" height="100" width="100" alt="" style="margin-top: 1vh" />
@@ -114,36 +110,20 @@
               <div class="row align-items-center mt-4 form-floating mb-3">
                 <input class="form-control" type="date" id="floatingInput" placeholder="name@example.com"
                   formControlName="FECHA_INICIAL" />
-                <label for="floatingInput">Fecha inicial</label>
+                <label for="floatingInput">Fecha de Inicio</label>
               </div>
-
               <div class="row align-items-center mt-4 form-floating mb-3">
                 <input class="form-control" type="date" id="floatingInput" placeholder="name@example.com"
                   formControlName="FECHA_FINAL" />
-                <label for="floatingInput">Fecha fin</label>
+                <label for="floatingInput">Fecha Final</label>
               </div>
-
-              <!-- <div class="row align-items-center mt-4 form-floating mb-3">
-                  <select
-                    class="form-select"
-                    aria-label="Default select example"
-                    formControlName="DIAS_PERMISO"
-                  >
-                    <optgroup label="Selecciona por cuanto tiempo sera el permiso">
-                      <option value="1">7 Dias</option>
-                      <option value="2">15 Dias</option>
-                      <option value="3">28 Dias</option>
-                    </optgroup>
-                  </select>
-                  <label for="floatingInput">Dias de Permiso</label>
-                </div> -->
               <div style="
                     width: 100%;
                     justify-content: center;
                     text-align: center;
                   ">
-<!-- (click)="crearPDF()" -->
-                <button type="submit" id="boton1"  style="
+                <!-- (click)="crearPDF()" -->
+                <button id="boton1" style="
                       width: 18%;
                       color: aliceblue;
                       background-color: rgb(188, 8, 8);
@@ -155,7 +135,7 @@
                     ">
                   Guardar
                 </button>
-                <button id="boton2" style="
+                <button id="boton2" (click)="verDetalles()" style="
                       width: 18%;
                       color: aliceblue;
                       background-color: rgb(6, 46, 132);
@@ -170,8 +150,9 @@
                 </button>
               </div>
             </form>
+            
           </div>
-        </div>
+        </div>S
       </div>
     </section>
   </section>
